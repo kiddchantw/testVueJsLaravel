@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">vue js test</div>                 
                     <div class="card-body">
@@ -44,10 +44,11 @@
                             </tbody>
                         </table>
 
+                        <br><br><br>
 
 
 
-                        <h2>framework table example </h2>
+                        <h2>VuejsDatatableFactory  table example 未完成</h2>
                         <div class="card-body" border="1">
                             <datatable :columns="columns" :data="rows"></datatable>
                             <datatable-pager v-model="page" type="abbreviated" :per-page="per_page"></datatable-pager>
@@ -57,6 +58,7 @@
                         <h2>easy UI table</h2>
 
                         <button type="button" @click="testGrid">click</button>
+                        <button type="button" @click="getTable">reload</button>
 
                         <div>
                             <DataGrid :data="data" style="height:250px">
