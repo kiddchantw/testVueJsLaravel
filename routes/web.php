@@ -29,6 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/post', 'App\Http\Controllers\PostController@index')->name('post');
 Route::get('/userlist','App\Http\Controllers\PostController@userlist')->name('userlist');
 Route::post('/testRequest','App\Http\Controllers\PostController@testRequest')->name('testRequest');
+Route::get('/testGrid','App\Http\Controllers\PostController@testGrid')->name('testGrid');
 
 
 // Route::post('/post', 'PostController@createPost');

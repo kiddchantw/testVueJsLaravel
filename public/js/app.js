@@ -2018,6 +2018,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2048,8 +2051,12 @@ __webpack_require__.r(__webpack_exports__);
       msg: 'first',
       text_A: null,
       newPost: '',
-      //   data = null,
-      data: [{
+      data: null
+    };
+  },
+  methods: {
+    getTable: function getTable() {
+      this.data = [{
         "code": "FI-SW-01",
         "name": "Koi",
         "unitcost": 10.00,
@@ -2129,13 +2136,8 @@ __webpack_require__.r(__webpack_exports__);
         "listprice": 63.50,
         "attr": "Adult Male",
         "itemid": "EST-18"
-      }]
-    };
-  },
-  methods: {
-    // newGrid(){
-    //     this.data =  
-    // },
+      }];
+    },
     getUser: function getUser() {
       var _this = this;
 
@@ -2153,15 +2155,19 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         $('#success').html(response.data.message);
       });
-    } //  getPosts: function() {
-    //     axios.get('/posts').then(function(response){
-    //         this.rows = response.data;
-    //     }.bind(this));
-    // }
+    },
+    testGrid: function testGrid() {
+      var _this2 = this;
 
+      axios.get('/testGrid').then(function (response) {
+        console.log('testGrid Response : ', response.data.users);
+        _this2.data = response.data.users;
+      });
+    }
   },
   created: function created() {
-    this.getUser(); // this.getPosts()
+    this.getUser(), // this.getPosts()
+    this.getTable();
   }
 });
 
@@ -38939,6 +38945,12 @@ var render = function() {
             _c("h2", [_vm._v("easy UI table")]),
             _vm._v(" "),
             _c(
+              "button",
+              { attrs: { type: "button" }, on: { click: _vm.testGrid } },
+              [_vm._v("click")]
+            ),
+            _vm._v(" "),
+            _c(
               "div",
               [
                 _c(
@@ -52696,14 +52708,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./resources/js/components/PostComponent.vue ***!
   \***************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PostComponent_vue_vue_type_template_id_54a00d62___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PostComponent.vue?vue&type=template&id=54a00d62& */ "./resources/js/components/PostComponent.vue?vue&type=template&id=54a00d62&");
 /* harmony import */ var _PostComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PostComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/PostComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _PostComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _PostComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -52733,7 +52746,7 @@ component.options.__file = "resources/js/components/PostComponent.vue"
 /*!****************************************************************************!*\
   !*** ./resources/js/components/PostComponent.vue?vue&type=script&lang=js& ***!
   \****************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

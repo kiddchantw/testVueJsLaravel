@@ -42,7 +42,15 @@ class PostController extends Controller
         # code...
         // {"id":1,"region":1,"server_id":"qweqwe","remote_path":"\/tmp\/serverA\/log\/","last_modified_at":"2020-10-27 14:57:27","filename":"log20201027.zip","local_path":"\/tmp\/log\/serverA_log20201027.zip"},{"id":2,"region":1,"server_id":"QWEQWE2","remote_path":"\/tmp\/serverB\/log\/","last_modified_at":"2020-10-27 14:58:25","filename":"log20201027.zip","local_path":"\/tmp\/log\/serverB_log20201027.zip"},{"id":3,"region":1,"server_id":"qweqwe","remote_path":"\/tmp\/serverA\/log\/","last_modified_at":"2020-10-27 14:58:56","filename":"log20201026.zip","local_path":"\/tmp\/log\/serverA_log20201026.zip"}
 
-
+        return response()->json(
+            ['users' => 
+                [
+                    [
+                        "code"=>"FI-SW-01","name"=>"Koi","unitcost"=>10.00,"status"=>"P","listprice"=>36.50,"attr"=>"Large","itemid"=>"EST-1"
+                    ]
+                ]
+            ],
+        );
     }
 
     // public function createPost(Request $request)

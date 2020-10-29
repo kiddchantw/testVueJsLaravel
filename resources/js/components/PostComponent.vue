@@ -55,6 +55,9 @@
 
 
                         <h2>easy UI table</h2>
+
+                        <button type="button" @click="testGrid">click</button>
+
                         <div>
                             <DataGrid :data="data" style="height:250px">
                                 <GridColumn field="itemid" title="Item ID"></GridColumn>
@@ -100,8 +103,13 @@
               msg: 'first',
               text_A: null,
               newPost: '',
-            //   data = null,
-            data: [
+              data : null,
+            }
+        },
+        methods: {
+
+            getTable(){
+                this.data = [
                     {"code":"FI-SW-01","name":"Koi","unitcost":10.00,"status":"P","listprice":36.50,"attr":"Large","itemid":"EST-1"},
                     {"code":"K9-DL-01","name":"Dalmation","unitcost":12.00,"status":"P","listprice":18.50,"attr":"Spotted Adult Female","itemid":"EST-10"},
                     {"code":"RP-SN-01","name":"Rattlesnake","unitcost":12.00,"status":"P","listprice":38.50,"attr":"Venomless","itemid":"EST-11"},
@@ -113,12 +121,7 @@
                     {"code":"FL-DLH-02","name":"Persian","unitcost":12.00,"status":"P","listprice":89.50,"attr":"Adult Male","itemid":"EST-17"},
                     {"code":"AV-CB-01","name":"Amazon Parrot","unitcost":92.00,"status":"P","listprice":63.50,"attr":"Adult Male","itemid":"EST-18"}
                 ]
-            }
-        },
-        methods: {
-            // newGrid(){
-            //     this.data =  
-            // },
+            },
             getUser(){
                 axios.get('/userlist')
                      .then((response)=>{
@@ -135,15 +138,19 @@
                      $('#success').html(response.data.message)
                 })
             },
-            //  getPosts: function() {
-            //     axios.get('/posts').then(function(response){
-            //         this.rows = response.data;
-            //     }.bind(this));
-            // }
+
+            testGrid(){
+                axios.get('/testGrid')
+                     .then((response)=>{
+                        console.log('testGrid Response : ', response.data.users)
+                        this.data =  response.data.users
+                     })
+            },
         },
         created() {
-            this.getUser()
+            this.getUser(),
             // this.getPosts()
+            this.getTable()
         },        
     }
 </script>
