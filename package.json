@@ -16,16 +16,21 @@
         "babel-loader": "^8.1.0",
         "bootstrap": "^4.0.0",
         "cross-env": "^7.0",
+        "css-loader": "^1.0.1",
         "jquery": "^3.2",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.20",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.20.1",
-        "sass-loader": "^10.0.4",
+        "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10",
-        "webpack": "^5.2.0"
+        "webpack": "^4.44.2"
     },
-    "dependencies": {}
+    "dependencies": {
+        "vue-router": "^3.4.8",
+        "vuejs-datatable": "^2.0.0-alpha.7",
+        "vx-easyui": "^1.2.17"
+    }
 }

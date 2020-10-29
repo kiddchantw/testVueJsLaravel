@@ -3,10 +3,26 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Vue from "vue";
+
+import { VuejsDatatableFactory } from 'vuejs-datatable';
+Vue.use( VuejsDatatableFactory );
+
+
+import 'vx-easyui/dist/themes/default/easyui.css';
+import 'vx-easyui/dist/themes/icon.css';
+import 'vx-easyui/dist/themes/vue.css';
+import EasyUI from 'vx-easyui';
+Vue.use(EasyUI);
+
+
+
+
 
 require('./bootstrap');
 
 window.Vue = require('vue');
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,6 +37,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('post-component', require('./components/PostComponent.vue').default);
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
