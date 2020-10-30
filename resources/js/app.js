@@ -17,8 +17,6 @@ Vue.use(EasyUI);
 
 
 
-
-
 require('./bootstrap');
 
 window.Vue = require('vue');

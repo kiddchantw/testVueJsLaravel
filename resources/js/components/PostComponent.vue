@@ -28,15 +28,21 @@
                         <h2>html table</h2>
                         <table border="1">
                             <thead>
-                                <tr>
+                                <!-- <tr>
                                     <th colspan="2">The table header</th>
+                                </tr> -->
+                                 <tr>
+                                    <!-- <td>id</td> -->
+                                     <th data-options="field:'name',width:100,formatter:planUrl">id</th>      
+                                    <!-- <td>title</td> -->
+                                    <th data-options="field:'name',width:100,formatter:planUrl">title</th>      
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>id</td>
-                                    <td>title</td>
-                                </tr>
+                                <!-- <tr> -->
+                                    <!-- <td>id</td> -->
+                                    <!-- <td>title</td> -->
+                                <!-- </tr> --> 
                                 <tr>
                                     <td>id</td>
                                     <td>abc</td>
@@ -46,8 +52,6 @@
 
                         <br><br><br>
 
-
-
                         <h2>VuejsDatatableFactory  table example 未完成</h2>
                         <div class="card-body" border="1">
                             <datatable :columns="columns" :data="rows"></datatable>
@@ -55,23 +59,61 @@
                         </div>
 
 
-                        <h2>easy UI table</h2>
+                        <h2>easy UI table </h2>
 
                         <button type="button" @click="testGrid">click</button>
                         <button type="button" @click="getTable">reload</button>
 
                         <div>
-                            <DataGrid :data="data" style="height:250px">
-                                <GridColumn field="itemid" title="Item ID"></GridColumn>
-                                <GridColumn field="name" title="Name"></GridColumn>
-                                <GridColumn field="listprice" title="List Price" align="right"></GridColumn>
-                                <GridColumn field="unitcost" title="Unit Cost" align="right"></GridColumn>
-                                <GridColumn field="attr" title="Attribute" width="30%"></GridColumn>
-                                <GridColumn field="status" title="Status" align="center"></GridColumn>
+                            <DataGrid :data="data" style="height:250px" :clickToEdit="true" selectionMode="cell" editMode="cell" >
+                                <GridColumn field="itemid" title="Item ID" width="10%" ></GridColumn>
+                                <GridColumn field="name" title="Name"  width="10%" :editable="true" :editRules="['required','length[3,15]']"></GridColumn>
+                                
+                                <GridColumn field="listprice" title="List Price" align="right"  width="10%" :editable="true">
+                                    <template slot="edit" slot-scope="scope">
+                                        <NumberBox v-model="scope.row.listprice" :precision="1"></NumberBox>
+                                    </template>
+                                </GridColumn>
+                                <GridColumn field="unitcost" title="Unit Cost" align="right"  width="10%" :editable="true">
+                                    <template slot="edit" slot-scope="scope">
+                                        <NumberBox v-model="scope.row.unitcost"></NumberBox> 
+                                    </template>
+
+                                </GridColumn>
+
+                                <GridColumn field="attr" title="Attribute" width="10%"></GridColumn>
+                                
+                                <GridColumn field="status" title="Status" align="center"  width="10%">
+                                </GridColumn>
+
+                                <GridColumn field="link" title="link" align="center" data-options="field:'id', width:100, formatter: operation">
+                                    <template slot="body">
+                                        <a href="https://www.youtube.com/" target="_blank">open</a><br>
+                                    </template>
+                                </GridColumn>
+                               <!-- <th field ="detail" width = "120" formatter="formatDetail">Actions</th> -->
                             </DataGrid>
                         </div>
+                        <br><br><br>
+                        <a href="https://www.youtube.com/">這個連結會連到 YouTube</a><br>
 
-                        
+
+                        <table class="easyui-datagrid" style="width:400px;height:250px" data-options="url:'datagrid_data.json',fitColumns:true,singleSelect:true">
+                        <thead>   
+                            <tr>    
+                            <th data-options="field:'code',width:100">Code</th>         
+                            <th data-options="field:'name',width:100,formatter:planUrl">Name</th>        
+                            </tr>       
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>abc</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                    <a href="https://www.youtube.com/">這個連結會連到YouTube</a><br>
+
                     </div>
                 </div>
             </div>
@@ -81,6 +123,30 @@
 
 <script>
     import { VuejsDatatableFactory } from 'vuejs-datatable';
+
+    function planUrl(){    
+           return '<a target="_blank" href="https://www.youtube.com/"></a>';
+
+    }
+
+    function formatDetail(value,row){
+		var href = 'get_details.php?userid='+row.id;
+		return '<a target="_blank" href="' + href + '">View Detail</a>';
+	}
+
+
+    function operation(value, row, index)
+    {
+    return "<a href='" + row.id + "' target='_blank'>Cell Link Name</a>";
+    }
+    // // function operation(value, row, index)
+    // // {
+    // //     val =  d 
+    // //     // return '<a href="'https://www.google.com/?hl=zh_tw'">Cell Link Name'</a>"';
+    // //     return '<a href="'+url + row.customer_id+'">'+val+'</a>';
+
+    // }
+
 
     export default {
         components: { VuejsDatatableFactory },

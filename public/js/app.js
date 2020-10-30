@@ -2023,6 +2023,68 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+function planUrl() {
+  return '<a target="_blank" href="https://www.youtube.com/"></a>';
+}
+
+function formatDetail(value, row) {
+  var href = 'get_details.php?userid=' + row.id;
+  return '<a target="_blank" href="' + href + '">View Detail</a>';
+}
+
+function operation(value, row, index) {
+  return "<a href='" + row.id + "' target='_blank'>Cell Link Name</a>";
+} // // function operation(value, row, index)
+// // {
+// //     val =  d 
+// //     // return '<a href="'https://www.google.com/?hl=zh_tw'">Cell Link Name'</a>"';
+// //     return '<a href="'+url + row.customer_id+'">'+val+'</a>';
+// }
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -38948,7 +39010,7 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c("h2", [_vm._v("easy UI table")]),
+            _c("h2", [_vm._v("easy UI table ")]),
             _vm._v(" "),
             _c(
               "button",
@@ -38969,50 +39031,148 @@ var render = function() {
                   "DataGrid",
                   {
                     staticStyle: { height: "250px" },
-                    attrs: { data: _vm.data }
+                    attrs: {
+                      data: _vm.data,
+                      clickToEdit: true,
+                      selectionMode: "cell",
+                      editMode: "cell"
+                    }
                   },
                   [
                     _c("GridColumn", {
-                      attrs: { field: "itemid", title: "Item ID" }
+                      attrs: { field: "itemid", title: "Item ID", width: "10%" }
                     }),
                     _vm._v(" "),
                     _c("GridColumn", {
-                      attrs: { field: "name", title: "Name" }
+                      attrs: {
+                        field: "name",
+                        title: "Name",
+                        width: "10%",
+                        editable: true,
+                        editRules: ["required", "length[3,15]"]
+                      }
                     }),
                     _vm._v(" "),
                     _c("GridColumn", {
                       attrs: {
                         field: "listprice",
                         title: "List Price",
-                        align: "right"
-                      }
+                        align: "right",
+                        width: "10%",
+                        editable: true
+                      },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "edit",
+                          fn: function(scope) {
+                            return [
+                              _c("NumberBox", {
+                                attrs: { precision: 1 },
+                                model: {
+                                  value: scope.row.listprice,
+                                  callback: function($$v) {
+                                    _vm.$set(scope.row, "listprice", $$v)
+                                  },
+                                  expression: "scope.row.listprice"
+                                }
+                              })
+                            ]
+                          }
+                        }
+                      ])
                     }),
                     _vm._v(" "),
                     _c("GridColumn", {
                       attrs: {
                         field: "unitcost",
                         title: "Unit Cost",
-                        align: "right"
-                      }
+                        align: "right",
+                        width: "10%",
+                        editable: true
+                      },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "edit",
+                          fn: function(scope) {
+                            return [
+                              _c("NumberBox", {
+                                model: {
+                                  value: scope.row.unitcost,
+                                  callback: function($$v) {
+                                    _vm.$set(scope.row, "unitcost", $$v)
+                                  },
+                                  expression: "scope.row.unitcost"
+                                }
+                              })
+                            ]
+                          }
+                        }
+                      ])
                     }),
                     _vm._v(" "),
                     _c("GridColumn", {
-                      attrs: { field: "attr", title: "Attribute", width: "30%" }
+                      attrs: { field: "attr", title: "Attribute", width: "10%" }
                     }),
                     _vm._v(" "),
                     _c("GridColumn", {
                       attrs: {
                         field: "status",
                         title: "Status",
-                        align: "center"
+                        align: "center",
+                        width: "10%"
                       }
-                    })
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "GridColumn",
+                      {
+                        attrs: {
+                          field: "link",
+                          title: "link",
+                          align: "center",
+                          "data-options":
+                            "field:'id', width:100, formatter: operation"
+                        }
+                      },
+                      [
+                        _c("template", { slot: "body" }, [
+                          _c(
+                            "a",
+                            {
+                              attrs: {
+                                href: "https://www.youtube.com/",
+                                target: "_blank"
+                              }
+                            },
+                            [_vm._v("open")]
+                          ),
+                          _c("br")
+                        ])
+                      ],
+                      2
+                    )
                   ],
                   1
                 )
               ],
               1
-            )
+            ),
+            _vm._v(" "),
+            _c("br"),
+            _c("br"),
+            _c("br"),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "https://www.youtube.com/" } }, [
+              _vm._v("這個連結會連到 YouTube")
+            ]),
+            _c("br"),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "https://www.youtube.com/" } }, [
+              _vm._v("這個連結會連到YouTube")
+            ]),
+            _c("br")
           ])
         ])
       ])
@@ -39027,7 +39187,25 @@ var staticRenderFns = [
     return _c("table", { attrs: { border: "1" } }, [
       _c("thead", [
         _c("tr", [
-          _c("th", { attrs: { colspan: "2" } }, [_vm._v("The table header")])
+          _c(
+            "th",
+            {
+              attrs: {
+                "data-options": "field:'name',width:100,formatter:planUrl"
+              }
+            },
+            [_vm._v("id")]
+          ),
+          _vm._v(" "),
+          _c(
+            "th",
+            {
+              attrs: {
+                "data-options": "field:'name',width:100,formatter:planUrl"
+              }
+            },
+            [_vm._v("title")]
+          )
         ])
       ]),
       _vm._v(" "),
@@ -39035,16 +39213,53 @@ var staticRenderFns = [
         _c("tr", [
           _c("td", [_vm._v("id")]),
           _vm._v(" "),
-          _c("td", [_vm._v("title")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("id")]),
-          _vm._v(" "),
           _c("td", [_vm._v("abc")])
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "easyui-datagrid",
+        staticStyle: { width: "400px", height: "250px" },
+        attrs: {
+          "data-options":
+            "url:'datagrid_data.json',fitColumns:true,singleSelect:true"
+        }
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", { attrs: { "data-options": "field:'code',width:100" } }, [
+              _vm._v("Code")
+            ]),
+            _vm._v(" "),
+            _c(
+              "th",
+              {
+                attrs: {
+                  "data-options": "field:'name',width:100,formatter:planUrl"
+                }
+              },
+              [_vm._v("Name")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("id")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("abc")])
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
