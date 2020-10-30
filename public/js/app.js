@@ -2065,6 +2065,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 function planUrl() {
@@ -2127,7 +2137,8 @@ function operation(value, row, index) {
         "status": "P",
         "listprice": 36.50,
         "attr": "Large",
-        "itemid": "EST-1"
+        "itemid": "EST-1",
+        "link": "https://www.youtube.com/"
       }, {
         "code": "K9-DL-01",
         "name": "Dalmation",
@@ -2135,72 +2146,17 @@ function operation(value, row, index) {
         "status": "P",
         "listprice": 18.50,
         "attr": "Spotted Adult Female",
-        "itemid": "EST-10"
-      }, {
-        "code": "RP-SN-01",
-        "name": "Rattlesnake",
-        "unitcost": 12.00,
-        "status": "P",
-        "listprice": 38.50,
-        "attr": "Venomless",
-        "itemid": "EST-11"
-      }, {
-        "code": "RP-SN-01",
-        "name": "Rattlesnake",
-        "unitcost": 12.00,
-        "status": "P",
-        "listprice": 26.50,
-        "attr": "Rattleless",
-        "itemid": "EST-12"
-      }, {
-        "code": "RP-LI-02",
-        "name": "Iguana",
-        "unitcost": 12.00,
-        "status": "P",
-        "listprice": 35.50,
-        "attr": "Green Adult",
-        "itemid": "EST-13"
-      }, {
-        "code": "FL-DSH-01",
-        "name": "Manx",
-        "unitcost": 12.00,
-        "status": "P",
-        "listprice": 158.50,
-        "attr": "Tailless",
-        "itemid": "EST-14"
-      }, {
-        "code": "FL-DSH-01",
-        "name": "Manx",
-        "unitcost": 12.00,
-        "status": "P",
-        "listprice": 83.50,
-        "attr": "With tail",
-        "itemid": "EST-15"
-      }, {
-        "code": "FL-DLH-02",
-        "name": "Persian",
-        "unitcost": 12.00,
-        "status": "P",
-        "listprice": 23.50,
-        "attr": "Adult Female",
-        "itemid": "EST-16"
-      }, {
-        "code": "FL-DLH-02",
-        "name": "Persian",
-        "unitcost": 12.00,
-        "status": "P",
-        "listprice": 89.50,
-        "attr": "Adult Male",
-        "itemid": "EST-17"
-      }, {
-        "code": "AV-CB-01",
-        "name": "Amazon Parrot",
-        "unitcost": 92.00,
-        "status": "P",
-        "listprice": 63.50,
-        "attr": "Adult Male",
-        "itemid": "EST-18"
-      }];
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      } // {"code":"RP-SN-01","name":"Rattlesnake","unitcost":12.00,"status":"P","listprice":38.50,"attr":"Venomless","itemid":"EST-11"},
+      // {"code":"RP-SN-01","name":"Rattlesnake","unitcost":12.00,"status":"P","listprice":26.50,"attr":"Rattleless","itemid":"EST-12"},
+      // {"code":"RP-LI-02","name":"Iguana","unitcost":12.00,"status":"P","listprice":35.50,"attr":"Green Adult","itemid":"EST-13"},
+      // {"code":"FL-DSH-01","name":"Manx","unitcost":12.00,"status":"P","listprice":158.50,"attr":"Tailless","itemid":"EST-14"},
+      // {"code":"FL-DSH-01","name":"Manx","unitcost":12.00,"status":"P","listprice":83.50,"attr":"With tail","itemid":"EST-15"},
+      // {"code":"FL-DLH-02","name":"Persian","unitcost":12.00,"status":"P","listprice":23.50,"attr":"Adult Female","itemid":"EST-16"},
+      // {"code":"FL-DLH-02","name":"Persian","unitcost":12.00,"status":"P","listprice":89.50,"attr":"Adult Male","itemid":"EST-17"},
+      // {"code":"AV-CB-01","name":"Amazon Parrot","unitcost":92.00,"status":"P","listprice":63.50,"attr":"Adult Male","itemid":"EST-18"}
+      ];
     },
     getUser: function getUser() {
       var _this = this;
@@ -39123,34 +39079,34 @@ var render = function() {
                       }
                     }),
                     _vm._v(" "),
-                    _c(
-                      "GridColumn",
-                      {
-                        attrs: {
-                          field: "link",
-                          title: "link",
-                          align: "center",
-                          "data-options":
-                            "field:'id', width:100, formatter: operation"
-                        }
+                    _c("GridColumn", {
+                      attrs: {
+                        field: "link",
+                        title: "link",
+                        align: "center",
+                        "data-options":
+                          "field:'id', width:100, formatter: operation"
                       },
-                      [
-                        _c("template", { slot: "body" }, [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "https://www.youtube.com/",
-                                target: "_blank"
-                              }
-                            },
-                            [_vm._v("open")]
-                          ),
-                          _c("br")
-                        ])
-                      ],
-                      2
-                    )
+                      scopedSlots: _vm._u([
+                        {
+                          key: "body",
+                          fn: function(data) {
+                            return [
+                              _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    href: data.row.link,
+                                    target: "_blank"
+                                  }
+                                },
+                                [_vm._v("open")]
+                              )
+                            ]
+                          }
+                        }
+                      ])
+                    })
                   ],
                   1
                 )
