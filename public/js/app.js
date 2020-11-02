@@ -2075,6 +2075,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 function planUrl() {
@@ -2125,7 +2139,26 @@ function operation(value, row, index) {
       msg: 'first',
       text_A: null,
       newPost: '',
-      data: null
+      data: null,
+      pageSize: 3,
+      pageLayout: ['list', 'first', 'prev', 'next', 'last', 'refresh', 'info'],
+      value: ["3"],
+      data2: [{
+        id: "1",
+        text: "Java"
+      }, {
+        id: "2",
+        text: "C#"
+      }, {
+        id: "3",
+        text: "Ruby"
+      }, {
+        id: "4",
+        text: "Perl"
+      }, {
+        id: "5",
+        text: "Basic"
+      }]
     };
   },
   methods: {
@@ -2148,6 +2181,186 @@ function operation(value, row, index) {
         "attr": "Spotted Adult Female",
         "itemid": "EST-10",
         "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://www.apple.com/"
+      }, {
+        "code": "K9-DL-01",
+        "name": "Dalmation",
+        "unitcost": 12.00,
+        "status": "P",
+        "listprice": 18.50,
+        "attr": "Spotted Adult Female",
+        "itemid": "EST-10",
+        "link": "https://translate.google.com/"
       } // {"code":"RP-SN-01","name":"Rattlesnake","unitcost":12.00,"status":"P","listprice":38.50,"attr":"Venomless","itemid":"EST-11"},
       // {"code":"RP-SN-01","name":"Rattlesnake","unitcost":12.00,"status":"P","listprice":26.50,"attr":"Rattleless","itemid":"EST-12"},
       // {"code":"RP-LI-02","name":"Iguana","unitcost":12.00,"status":"P","listprice":35.50,"attr":"Green Adult","itemid":"EST-13"},
@@ -38853,283 +39066,362 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("vue js test")]),
+          _c("div", { staticClass: "card-header" }, [_vm._v("vue js test }")]),
           _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("p", [_vm._v(" get User: " + _vm._s(_vm.users) + " ")]),
-            _vm._v(" "),
-            _c("p", { attrs: { id: "success" } }),
-            _vm._v(" "),
-            _c(
-              "button",
-              { attrs: { type: "button" }, on: { click: _vm.prompt } },
-              [_vm._v("click")]
-            ),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.msg))]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.text_A,
-                  expression: "text_A"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: { type: "text", id: "alt-image" },
-              domProps: { value: _vm.text_A },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.text_A = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.text_A))]),
-            _vm._v(" "),
-            _c("p", [_vm._v("post example ")]),
-            _vm._v(" "),
-            _c(
-              "form",
-              {
-                on: {
-                  submit: function($event) {
-                    $event.preventDefault()
-                    return _vm.addNewPost($event)
-                  }
-                }
-              },
-              [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.newPost,
-                      expression: "newPost"
-                    }
-                  ],
-                  attrs: { type: "text", name: "title" },
-                  domProps: { value: _vm.newPost },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.newPost = $event.target.value
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("input", { attrs: { type: "submit", value: "Submit" } })
-              ]
-            ),
-            _vm._v(" "),
-            _c("br"),
-            _c("br"),
-            _c("br"),
-            _vm._v(" "),
-            _c("h2", [_vm._v("html table")]),
-            _vm._v(" "),
-            _vm._m(0),
-            _vm._v(" "),
-            _c("br"),
-            _c("br"),
-            _c("br"),
-            _vm._v(" "),
-            _c("h2", [_vm._v("VuejsDatatableFactory  table example 未完成")]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body", attrs: { border: "1" } },
-              [
-                _c("datatable", {
-                  attrs: { columns: _vm.columns, data: _vm.rows }
-                }),
-                _vm._v(" "),
-                _c("datatable-pager", {
-                  attrs: { type: "abbreviated", "per-page": _vm.per_page },
-                  model: {
-                    value: _vm.page,
-                    callback: function($$v) {
-                      _vm.page = $$v
-                    },
-                    expression: "page"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("h2", [_vm._v("easy UI table ")]),
-            _vm._v(" "),
-            _c(
-              "button",
-              { attrs: { type: "button" }, on: { click: _vm.testGrid } },
-              [_vm._v("click")]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              { attrs: { type: "button" }, on: { click: _vm.getTable } },
-              [_vm._v("reload")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              [
-                _c(
-                  "DataGrid",
+          _c(
+            "div",
+            { staticClass: "card-body" },
+            [
+              _c("p", [_vm._v(" get User: " + _vm._s(_vm.users) + " ")]),
+              _vm._v(" "),
+              _c("p", { attrs: { id: "success" } }),
+              _vm._v(" "),
+              _c(
+                "button",
+                { attrs: { type: "button" }, on: { click: _vm.prompt } },
+                [_vm._v("click")]
+              ),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.msg))]),
+              _vm._v(" "),
+              _c("br"),
+              _c("br"),
+              _c("br"),
+              _vm._v(" "),
+              _c("h2", [_vm._v("real time text")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
                   {
-                    staticStyle: { height: "250px" },
-                    attrs: {
-                      data: _vm.data,
-                      clickToEdit: true,
-                      selectionMode: "cell",
-                      editMode: "cell"
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.text_A,
+                    expression: "text_A"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", id: "alt-image" },
+                domProps: { value: _vm.text_A },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
                     }
+                    _vm.text_A = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.text_A))]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("post example ")]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.addNewPost($event)
+                    }
+                  }
+                },
+                [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.newPost,
+                        expression: "newPost"
+                      }
+                    ],
+                    attrs: { type: "text", name: "title" },
+                    domProps: { value: _vm.newPost },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.newPost = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("input", { attrs: { type: "submit", value: "Submit" } })
+                ]
+              ),
+              _vm._v(" "),
+              _c("br"),
+              _c("br"),
+              _c("br"),
+              _vm._v(" "),
+              _c("h2", [_vm._v("TagBox with Autocomplete")]),
+              _vm._v(" "),
+              _c("TagBox", {
+                staticStyle: { width: "300px" },
+                attrs: {
+                  valueField: "id",
+                  textField: "text",
+                  placeholder: "Select a Language",
+                  limitToList: true,
+                  hasDownArrow: true,
+                  data: _vm.data2
+                },
+                model: {
+                  value: _vm.value,
+                  callback: function($$v) {
+                    _vm.value = $$v
                   },
-                  [
-                    _c("GridColumn", {
-                      attrs: { field: "itemid", title: "Item ID", width: "10%" }
-                    }),
-                    _vm._v(" "),
-                    _c("GridColumn", {
+                  expression: "value"
+                }
+              }),
+              _vm._v(" "),
+              _vm.value ? _c("p", [_vm._v(_vm._s(_vm.value))]) : _vm._e(),
+              _vm._v(" "),
+              _c("br"),
+              _c("br"),
+              _c("br"),
+              _vm._v(" "),
+              _c("h2", [_vm._v("html table")]),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
+              _c("br"),
+              _c("br"),
+              _c("br"),
+              _vm._v(" "),
+              _c("h2", [_vm._v("easy UI table v2")]),
+              _vm._v(" "),
+              _c(
+                "LinkButton",
+                {
+                  attrs: { iconCls: "icon-search", plain: true },
+                  on: { click: _vm.testGrid }
+                },
+                [_vm._v("click")]
+              ),
+              _vm._v(" "),
+              _c(
+                "LinkButton",
+                {
+                  attrs: { iconCls: "icon-reload", plain: true },
+                  on: { click: _vm.getTable }
+                },
+                [_vm._v("Reload")]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                [
+                  _c(
+                    "DataGrid",
+                    {
+                      staticStyle: { height: "250px" },
                       attrs: {
-                        field: "name",
-                        title: "Name",
-                        width: "10%",
-                        editable: true,
-                        editRules: ["required", "length[3,15]"]
+                        data: _vm.data,
+                        clickToEdit: true,
+                        selectionMode: "cell",
+                        editMode: "cell",
+                        pagination: true,
+                        pageSize: _vm.pageSize,
+                        pageLayout: _vm.pageLayout
                       }
-                    }),
-                    _vm._v(" "),
-                    _c("GridColumn", {
-                      attrs: {
-                        field: "listprice",
-                        title: "List Price",
-                        align: "right",
-                        width: "10%",
-                        editable: true
-                      },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "edit",
-                          fn: function(scope) {
-                            return [
-                              _c("NumberBox", {
-                                attrs: { precision: 1 },
-                                model: {
-                                  value: scope.row.listprice,
-                                  callback: function($$v) {
-                                    _vm.$set(scope.row, "listprice", $$v)
-                                  },
-                                  expression: "scope.row.listprice"
-                                }
-                              })
-                            ]
+                    },
+                    [
+                      _vm._v(
+                        "\n                            >\n                            "
+                      ),
+                      _c("GridColumn", {
+                        attrs: {
+                          align: "center",
+                          cellCss: "datagrid-td-rownumber",
+                          width: "30"
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "body",
+                            fn: function(scope) {
+                              return [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(scope.rowIndex + 1) +
+                                    "\n                                "
+                                )
+                              ]
+                            }
                           }
+                        ])
+                      }),
+                      _vm._v(" "),
+                      _c("GridColumn", {
+                        attrs: {
+                          field: "itemid",
+                          title: "Item ID",
+                          width: "10%"
                         }
-                      ])
-                    }),
-                    _vm._v(" "),
-                    _c("GridColumn", {
-                      attrs: {
-                        field: "unitcost",
-                        title: "Unit Cost",
-                        align: "right",
-                        width: "10%",
-                        editable: true
-                      },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "edit",
-                          fn: function(scope) {
-                            return [
-                              _c("NumberBox", {
-                                model: {
-                                  value: scope.row.unitcost,
-                                  callback: function($$v) {
-                                    _vm.$set(scope.row, "unitcost", $$v)
-                                  },
-                                  expression: "scope.row.unitcost"
-                                }
-                              })
-                            ]
-                          }
+                      }),
+                      _vm._v(" "),
+                      _c("GridColumn", {
+                        attrs: {
+                          field: "name",
+                          title: "Name",
+                          width: "10%",
+                          editable: true,
+                          editRules: ["required", "length[3,15]"]
                         }
-                      ])
-                    }),
-                    _vm._v(" "),
-                    _c("GridColumn", {
-                      attrs: { field: "attr", title: "Attribute", width: "10%" }
-                    }),
-                    _vm._v(" "),
-                    _c("GridColumn", {
-                      attrs: {
-                        field: "status",
-                        title: "Status",
-                        align: "center",
-                        width: "10%"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("GridColumn", {
-                      attrs: {
-                        field: "link",
-                        title: "link",
-                        align: "center",
-                        "data-options":
-                          "field:'id', width:100, formatter: operation"
-                      },
-                      scopedSlots: _vm._u([
-                        {
-                          key: "body",
-                          fn: function(data) {
-                            return [
-                              _c(
-                                "a",
-                                {
-                                  attrs: {
-                                    href: data.row.link,
-                                    target: "_blank"
+                      }),
+                      _vm._v(" "),
+                      _c("GridColumn", {
+                        attrs: {
+                          field: "listprice",
+                          title: "List Price",
+                          align: "right",
+                          width: "10%",
+                          editable: true
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "edit",
+                            fn: function(scope) {
+                              return [
+                                _c("NumberBox", {
+                                  attrs: { precision: 1 },
+                                  model: {
+                                    value: scope.row.listprice,
+                                    callback: function($$v) {
+                                      _vm.$set(scope.row, "listprice", $$v)
+                                    },
+                                    expression: "scope.row.listprice"
                                   }
-                                },
-                                [_vm._v("open")]
-                              )
-                            ]
+                                })
+                              ]
+                            }
                           }
+                        ])
+                      }),
+                      _vm._v(" "),
+                      _c("GridColumn", {
+                        attrs: {
+                          field: "unitcost",
+                          title: "Unit Cost",
+                          align: "right",
+                          width: "10%",
+                          editable: true
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "edit",
+                            fn: function(scope) {
+                              return [
+                                _c("NumberBox", {
+                                  model: {
+                                    value: scope.row.unitcost,
+                                    callback: function($$v) {
+                                      _vm.$set(scope.row, "unitcost", $$v)
+                                    },
+                                    expression: "scope.row.unitcost"
+                                  }
+                                })
+                              ]
+                            }
+                          }
+                        ])
+                      }),
+                      _vm._v(" "),
+                      _c("GridColumn", {
+                        attrs: {
+                          field: "attr",
+                          title: "Attribute",
+                          width: "10%"
                         }
-                      ])
-                    })
-                  ],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("br"),
-            _c("br"),
-            _c("br"),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "https://www.youtube.com/" } }, [
-              _vm._v("這個連結會連到 YouTube")
-            ]),
-            _c("br"),
-            _vm._v(" "),
-            _vm._m(1),
-            _vm._v(" "),
-            _c("a", { attrs: { href: "https://www.youtube.com/" } }, [
-              _vm._v("這個連結會連到YouTube")
-            ]),
-            _c("br")
-          ])
+                      }),
+                      _vm._v(" "),
+                      _c("GridColumn", {
+                        attrs: {
+                          field: "status",
+                          title: "Status",
+                          align: "center",
+                          width: "10%"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("GridColumn", {
+                        attrs: {
+                          field: "link",
+                          title: "link",
+                          align: "center",
+                          "data-options":
+                            "field:'id', width:100, formatter: operation"
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "body",
+                            fn: function(data) {
+                              return [
+                                _c(
+                                  "a",
+                                  {
+                                    attrs: {
+                                      href: data.row.link,
+                                      target: "_blank"
+                                    }
+                                  },
+                                  [_vm._v("open")]
+                                )
+                              ]
+                            }
+                          }
+                        ])
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("br"),
+              _c("br"),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "https://www.youtube.com/" } }, [
+                _vm._v("這個連結會連到 YouTube")
+              ]),
+              _c("br"),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("br"),
+              _c("br"),
+              _c("br"),
+              _vm._v(" "),
+              _c("h2", [_vm._v("VuejsDatatableFactory table example 未完成")]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "card-body", attrs: { border: "1" } },
+                [
+                  _c("datatable", {
+                    attrs: { columns: _vm.columns, data: _vm.rows }
+                  }),
+                  _vm._v(" "),
+                  _c("datatable-pager", {
+                    attrs: { type: "abbreviated", "per-page": _vm.per_page },
+                    model: {
+                      value: _vm.page,
+                      callback: function($$v) {
+                        _vm.page = $$v
+                      },
+                      expression: "page"
+                    }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
         ])
       ])
     ])
