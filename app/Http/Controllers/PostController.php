@@ -17,6 +17,12 @@ class PostController extends Controller
     }
 
 
+    public function index2()
+    {
+       return view('headerMenu');
+    }
+
+
     public function userlist()
     {
         return response()->json(

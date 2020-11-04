@@ -35,6 +35,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('post-component', require('./components/PostComponent.vue').default);
+Vue.component('topmenu-component', require('./components/TopMenuComponent.vue').default);
+Vue.component('upload-component', require('./components/UploadComponent.vue').default);
 
 
 

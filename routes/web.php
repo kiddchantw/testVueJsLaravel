@@ -31,6 +31,14 @@ Route::get('/userlist','App\Http\Controllers\PostController@userlist')->name('us
 Route::post('/testRequest','App\Http\Controllers\PostController@testRequest')->name('testRequest');
 Route::get('/testGrid','App\Http\Controllers\PostController@testGrid')->name('testGrid');
 
+//測試分頁
+Route::get('/headerMenu', 'App\Http\Controllers\PostController@index2')->name('headerMenu');
+
+
+//上傳檔案
+Route::get('/uploadtest', 'App\Http\Controllers\uploadTest@index')->name('uploadtest');
+Route::post('/uploadfile', 'App\Http\Controllers\uploadTest@uploadFile');
+
 
 // Route::post('/post', 'PostController@createPost');
 

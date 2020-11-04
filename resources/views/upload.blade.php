@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <post-component><post-component>
+  <upload-component></upload-component>
 @endsection  
 
 
