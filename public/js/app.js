@@ -2541,6 +2541,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2553,6 +2567,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    onFileSelect: function onFileSelect(event) {
+      this.filename = event[0].name;
+      this.file = event.target.file;
+    },
     onFileChange: function onFileChange(e) {
       //console.log(e.target.files[0]);
       this.filename = "Selected File: " + e.target.files[0].name;
@@ -39932,8 +39950,10 @@ var render = function() {
     "div",
     { staticClass: "container", staticStyle: { "margin-top": "50px" } },
     [
+      _c("h3", [_vm._v(" m1 ok")]),
+      _vm._v(" "),
       _c("div", { staticClass: "text-center" }, [
-        _c("h4", [_vm._v("File Upload with VueJS and Laravel")]),
+        _c("h4", [_vm._v("File Upload with VueJS and Laravel 2")]),
         _c("br"),
         _vm._v(" "),
         _c("div", { staticStyle: { "max-width": "500px", margin: "0 auto" } }, [
@@ -39962,7 +39982,7 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "input-group" }, [
-                _c("div", { staticClass: "custom-file" }, [
+                _c("div", { staticClass: "custom-file col-8" }, [
                   _c("input", {
                     staticClass: "custom-file-input",
                     attrs: {
@@ -39994,7 +40014,58 @@ var render = function() {
             ]
           )
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("h3", [_vm._v(" m2 fail ")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c(
+            "FileButton",
+            {
+              staticStyle: { width: "100px" },
+              on: {
+                select: function($event) {
+                  return _vm.onFileSelect($event)
+                }
+              }
+            },
+            [_vm._v("Select a file")]
+          ),
+          _vm._v(" "),
+          _vm.filename
+            ? _c("p", [_vm._v("You selected: " + _vm._s(_vm.filename))])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("p", [_vm._v("格式檢查結果:")]),
+          _vm._v(" "),
+          _c(
+            "LinkButton",
+            {
+              attrs: { iconCls: "icon-save" },
+              on: {
+                click: function($event) {
+                  return _vm.submitForm($event)
+                }
+              }
+            },
+            [_vm._v(" Save ")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "btn btn-primary",
+            attrs: { type: "submit", value: "Upload" }
+          })
+        ],
+        1
+      )
     ]
   )
 }
@@ -40003,7 +40074,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-append" }, [
+    return _c("div", { staticClass: "input-group-append col-4" }, [
       _c("input", {
         staticClass: "btn btn-primary",
         attrs: { type: "submit", value: "Upload" }
