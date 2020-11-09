@@ -63,12 +63,13 @@
 
                     <LinkButton iconCls="icon-search" :plain="true" @click="testGrid ">click</LinkButton>
                     <LinkButton iconCls="icon-reload" :plain="true" @click="getTable">Reload</LinkButton>
+                    <LinkButton iconCls="icon-reload" :plain="true" @click="stopLoading">stopLoading</LinkButton>
 
                     <!-- <button type="button" @click="testGrid">click</button>
                     <button type="button" @click="getTable">reload</button> -->
 
                     <div>
-                        <DataGrid :data="data" style="height:250px" :clickToEdit="true" selectionMode="cell" editMode="cell" :pagination="true" :pageSize="pageSize" :pageLayout="pageLayout">
+                        <DataGrid :data="data" style="height:250px" :clickToEdit="true" selectionMode="cell" editMode="cell" :pagination="true" :pageSize="pageSize" :pageLayout="pageLayout" :loading="loading">
                             >
                             <GridColumn align="center" cellCss="datagrid-td-rownumber" width="30">
                                 <template slot="body" slot-scope="scope">
@@ -183,6 +184,7 @@ export default {
 
     data() {
         return {
+            loading: true,
             columns: [{
                     label: 'id',
                     field: 'id'
@@ -235,7 +237,9 @@ export default {
         }
     },
     methods: {
-
+        stopLoading(){
+            this.loading = false
+        },
         getTable() {
             this.data = [{
                     "code": "FI-SW-01",

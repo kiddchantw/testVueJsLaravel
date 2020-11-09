@@ -2089,6 +2089,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 function planUrl() {
@@ -2119,6 +2120,7 @@ function operation(value, row, index) {
   },
   data: function data() {
     return {
+      loading: true,
       columns: [{
         label: 'id',
         field: 'id'
@@ -2162,6 +2164,9 @@ function operation(value, row, index) {
     };
   },
   methods: {
+    stopLoading: function stopLoading() {
+      this.loading = false;
+    },
     getTable: function getTable() {
       this.data = [{
         "code": "FI-SW-01",
@@ -39407,6 +39412,15 @@ var render = function() {
               ),
               _vm._v(" "),
               _c(
+                "LinkButton",
+                {
+                  attrs: { iconCls: "icon-reload", plain: true },
+                  on: { click: _vm.stopLoading }
+                },
+                [_vm._v("stopLoading")]
+              ),
+              _vm._v(" "),
+              _c(
                 "div",
                 [
                   _c(
@@ -39420,7 +39434,8 @@ var render = function() {
                         editMode: "cell",
                         pagination: true,
                         pageSize: _vm.pageSize,
-                        pageLayout: _vm.pageLayout
+                        pageLayout: _vm.pageLayout,
+                        loading: _vm.loading
                       }
                     },
                     [
