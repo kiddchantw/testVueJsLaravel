@@ -6,13 +6,32 @@
                 <div class="card-header">vue js test </div>
                 <div class="card-body">
 
+                    <h2>Basic ComboTree</h2>
+                    <ComboTree :data="dataComboTreeOneMonth" placeholder="顯示排除日期">
+                        <!--v-model="value"-->
+                        <Tree slot="tree"></Tree>
+                    </ComboTree>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <h2>Basic SideMenu</h2>
+                    <LinkButton @click="toggle()">顯示排除日期</LinkButton>
+                    <!--style="margin-bottom:20px"-->
+                    <SideMenu :style="{width:width+'px'}" :data="menus" :collapsed="collapsed" @selectionChange="selection=$event" :hidden="menusShow">
+                    </SideMenu>
+
+                    <br>
+                    <br>
+                    <br>
+
                     <p> get User: {{ users }} </p>
 
                     <p id="success"></p>
 
                     <button type="button" @click="prompt">click</button>
                     <p>{{ msg }}</p>
-                   
 
                     <br><br><br>
                     <h2>real time text</h2>
@@ -172,7 +191,6 @@ function operation(value, row, index) {
 
 // }
 
-
 export default {
 
     components: {
@@ -232,12 +250,76 @@ export default {
                     id: "5",
                     text: "Basic"
                 }
-            ]
+            ],
+            width: 200,
+            menusShow: true,
+            collapsed: false,
+            selection: null,
+            menus: [{
+                    text: "2020-09",
+                    iconCls : "icon-mini-edit",
+                    state: "open",
+                    children: [{
+                            text: "2020-09-01"
+                        },
+                        {
+                            text: "2020-09-02"
+                        },
+                        {
+                            text: "2020-09-03"
+                        }
+                    ]
+                },
+                {
+                    text: "2020-12",
+//                    iconCls:"icon-mini-edit",
+                    iconCls:"icon-blank",
+                    state: "open",
+                    children: [{
+                            text: "2020-12-01"
+                        },
+                        {
+                            text: "2020-12-02"
+                        }
+                    ]
+                }
 
+            ],
+            dataComboTreeOneMonth: [
+                { text: "2020-09-01"},
+                { text: "2020-09-02"},
+            ],
+            dataComboTree: [
+                {
+                    text: "2020-09",
+                    children: [{
+                            text: "2020-09-01"
+                        },
+                        {
+                            text: "2020-09-02"
+
+                        },
+                        {
+                            text: "2020-09-03"
+                        },
+                    ],
+                },
+                {
+                    text: "2020-12",
+                    children: [{
+                        text: "2020-12-03"
+                    }, ],
+                },
+            ],
         }
     },
     methods: {
-        stopLoading(){
+        toggle() {
+            this.menusShow = !this.menusShow;
+            // this.collapsed = !this.collapsed;
+            this.width = this.collapsed ? 50 : 200;
+        },
+        stopLoading() {
             this.loading = false
         },
         getTable() {

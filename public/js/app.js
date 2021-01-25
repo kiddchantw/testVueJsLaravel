@@ -2090,6 +2090,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 function planUrl() {
@@ -2160,10 +2179,61 @@ function operation(value, row, index) {
       }, {
         id: "5",
         text: "Basic"
+      }],
+      width: 200,
+      menusShow: true,
+      collapsed: false,
+      selection: null,
+      menus: [{
+        text: "2020-09",
+        iconCls: "icon-mini-edit",
+        state: "open",
+        children: [{
+          text: "2020-09-01"
+        }, {
+          text: "2020-09-02"
+        }, {
+          text: "2020-09-03"
+        }]
+      }, {
+        text: "2020-12",
+        //                    iconCls:"icon-mini-edit",
+        iconCls: "icon-blank",
+        state: "open",
+        children: [{
+          text: "2020-12-01"
+        }, {
+          text: "2020-12-02"
+        }]
+      }],
+      dataComboTreeOneMonth: [{
+        text: "2020-09-01"
+      }, {
+        text: "2020-09-02"
+      }],
+      dataComboTree: [{
+        text: "2020-09",
+        children: [{
+          text: "2020-09-01"
+        }, {
+          text: "2020-09-02"
+        }, {
+          text: "2020-09-03"
+        }]
+      }, {
+        text: "2020-12",
+        children: [{
+          text: "2020-12-03"
+        }]
       }]
     };
   },
   methods: {
+    toggle: function toggle() {
+      this.menusShow = !this.menusShow; // this.collapsed = !this.collapsed;
+
+      this.width = this.collapsed ? 50 : 200;
+    },
     stopLoading: function stopLoading() {
       this.loading = false;
     },
@@ -39272,6 +39342,60 @@ var render = function() {
             "div",
             { staticClass: "card-body" },
             [
+              _c("h2", [_vm._v("Basic ComboTree")]),
+              _vm._v(" "),
+              _c(
+                "ComboTree",
+                {
+                  attrs: {
+                    data: _vm.dataComboTreeOneMonth,
+                    placeholder: "顯示排除日期"
+                  }
+                },
+                [_c("Tree", { attrs: { slot: "tree" }, slot: "tree" })],
+                1
+              ),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("h2", [_vm._v("Basic SideMenu")]),
+              _vm._v(" "),
+              _c(
+                "LinkButton",
+                {
+                  on: {
+                    click: function($event) {
+                      return _vm.toggle()
+                    }
+                  }
+                },
+                [_vm._v("顯示排除日期")]
+              ),
+              _vm._v(" "),
+              _c("SideMenu", {
+                style: { width: _vm.width + "px" },
+                attrs: {
+                  data: _vm.menus,
+                  collapsed: _vm.collapsed,
+                  hidden: _vm.menusShow
+                },
+                on: {
+                  selectionChange: function($event) {
+                    _vm.selection = $event
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
               _c("p", [_vm._v(" get User: " + _vm._s(_vm.users) + " ")]),
               _vm._v(" "),
               _c("p", { attrs: { id: "success" } }),
@@ -53772,14 +53896,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./resources/js/components/PostComponent.vue ***!
   \***************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PostComponent_vue_vue_type_template_id_54a00d62___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PostComponent.vue?vue&type=template&id=54a00d62& */ "./resources/js/components/PostComponent.vue?vue&type=template&id=54a00d62&");
 /* harmony import */ var _PostComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PostComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/PostComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _PostComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _PostComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -53809,7 +53934,7 @@ component.options.__file = "resources/js/components/PostComponent.vue"
 /*!****************************************************************************!*\
   !*** ./resources/js/components/PostComponent.vue?vue&type=script&lang=js& ***!
   \****************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
